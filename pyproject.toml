@@ -1,0 +1,40 @@
+[project]
+name = "Spotify-Analyzer"
+version = "0.0.0"
+authors = [
+  {name = "Wojciech Maziarz", email = "wmaziarzw@gmail.com"},
+  {name = "Adrianna Kuczaj"},
+  {name = "Oleksii Karobvski"},
+]
+description = "REST API for more complex operations made using Spotify API"
+readme = "README.md"
+keywords = ["Spotify", "Rest API"]
+requires-python = "==3.11"
+dependencies = [
+  "fastapi==0.111.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "mypy",
+    "pip-tools",
+    "ruff",
+    "pytest",
+]
+
+[tool.ruff]
+required-version = ">=0.4.0"
+line-length = 100
+indent-width = 4
+target-version = "py311"
+
+[tool.ruff.lint]
+extend-select = [
+  "E501"  # Catch line-length violations
+]
+
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
