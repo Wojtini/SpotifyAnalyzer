@@ -22,5 +22,10 @@ ruff check
 ### Typing mypy
 For check typing mypy is used. Command:
 ```shell
-mypy SpotifyAnalyzer --disallow-untyped-defs --warn-unreachable
+mypy app --disallow-untyped-defs --warn-unreachable
+```
+
+## Running
+```shell
+fastapi dev app/main.py
 ```
