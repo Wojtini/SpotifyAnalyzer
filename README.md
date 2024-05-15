@@ -2,7 +2,7 @@
 
 ## Requirements
 There are 2 sets of requirements.txt:
-1. requirements.txt with requirements to 
+1. requirements.txt
 2. requirements_dev.txt - superset of 1. which additionally contains libraries
 for development (tests and linters)
 
@@ -22,5 +22,10 @@ ruff check
 ### Typing mypy
 For check typing mypy is used. Command:
 ```shell
-mypy SpotifyAnalyzer --disallow-untyped-defs --warn-unreachable
+mypy app --disallow-untyped-defs --warn-unreachable
+```
+
+## Running
+```shell
+fastapi dev app/main.py
 ```

@@ -2,8 +2,8 @@
 name = "Spotify-Analyzer"
 version = "0.0.0"
 authors = [
-  {name = "Wojciech Maziarz", email = "wmaziarzw@gmail.com"},
-  {name = "Adrianna Kuczaj"},
+  {name = "Wojciech Maziarz"},
+  {name = "Adriana Kuczaj"},
   {name = "Oleksii Karobvski"},
 ]
 description = "REST API for more complex operations made using Spotify API"
