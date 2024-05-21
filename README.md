@@ -1,4 +1,13 @@
-# Spotify Analyzer
+# 
+<h1 align="center" style="display: block; font-size: 2.5em; font-weight: bold; margin-block-start: 1em; margin-block-end: 1em;">
+  <strong>Spotify Analyzer</strong>
+</h1>
+
+<div align="center">
+  <img src="https://img.shields.io/badge/Python-v3.11-yellow" alt="Python Badge">
+  <img src="https://img.shields.io/badge/Contributors-3-green" alt="Contributors Badge">
+  <img src="https://img.shields.io/badge/Version-0.0-red" alt="Hello World Badge">
+</div>
 
 ## Requirements
 There are 2 sets of requirements.txt:
