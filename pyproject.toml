@@ -29,8 +29,22 @@ indent-width = 4
 target-version = "py311"
 
 [tool.ruff.lint]
-extend-select = [
-  "E501"  # Catch line-length violations
+select = ["ALL"]
+ignore = [
+    "ANN101", # Annotating 'self' is not necessary
+    "ANN102", # Annotating 'cls' is not necessary
+    "D100", # Public module docstring
+    "D101", # Public class docstring
+    "D102", # Public method docstring
+    "D103", # Public function docstring
+    "D104", # Public package docstring
+    "D105", # Public magic method
+    "D107", # __init__ docstring
+    "D203",
+    "D213",
+    "FA102", # typing annotations from class instead of type
+    "G004", # allow f-string in logging
+    "SIM108", # allow if else instead of ternary
 ]
 
 
