@@ -1,0 +1,54 @@
+[project]
+name = "Spotify-Analyzer"
+version = "0.0.0"
+authors = [
+  {name = "Wojciech Maziarz"},
+  {name = "Adriana Kuczaj"},
+  {name = "Oleksii Karobvski"},
+]
+description = "REST API for more complex operations made using Spotify API"
+readme = "README.md"
+keywords = ["Spotify", "Rest API"]
+requires-python = "==3.11"
+dependencies = [
+  "fastapi==0.111.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "mypy",
+    "pip-tools",
+    "ruff",
+    "pytest",
+]
+
+[tool.ruff]
+required-version = ">=0.4.0"
+line-length = 100
+indent-width = 4
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "ANN101", # Annotating 'self' is not necessary
+    "ANN102", # Annotating 'cls' is not necessary
+    "D100", # Public module docstring
+    "D101", # Public class docstring
+    "D102", # Public method docstring
+    "D103", # Public function docstring
+    "D104", # Public package docstring
+    "D105", # Public magic method
+    "D107", # __init__ docstring
+    "D203",
+    "D213",
+    "FA102", # typing annotations from class instead of type
+    "G004", # allow f-string in logging
+    "SIM108", # allow if else instead of ternary
+]
+
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
