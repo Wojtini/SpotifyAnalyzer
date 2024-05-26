@@ -116,7 +116,11 @@ uvicorn[standard]==0.29.0
     # via
     #   fastapi
     #   fastapi-cli
+<<<<<<< HEAD
 #uvloop==0.19.0
+=======
+uvloop==0.19.0
+>>>>>>> 83db2983746822ff757f30bdeb7a4d0434944290
     # via uvicorn
 watchfiles==0.21.0
     # via uvicorn

@@ -31,32 +31,32 @@ def login(request: Request):
     url = 'https://accounts.spotify.com/authorize?' + urllib.parse.urlencode(query_params)
     return RedirectResponse(url)
 
-# @router.get("/token_test")
-# def callback(request: Request):
-#     code = request.query_params.get(code)
-#     STATE =  request.query_params.get(STATE)
+@router.get("/token_test")
+def callback(request: Request):
+    code = request.query_params.get(code)
+    STATE =  request.query_params.get(STATE)
 
-#     if STATE is None:
-#         return RedirectResponse('/#' + urllib.parse.urlencode({'error': 'state_mismatch'}))
-#     else:
-#         auth_options = {
-#             'url': 'https://accounts.spotify.com/api/token',
-#             'data': {
-#                 'code': code,
-#                 'redirect_uri': REDIRECT_URI,
-#                 'grant_type': 'authorization_code' 
-#             },
-#             'headers': {
-#                 'Content-Type': 'application/x-www-form-urlencoded',
-#                 'Authorization': 'Basic' + base64.b64encode(f'{CLIENT_ID}:{CLIENT_SECRET}'.encode()).decode()
-#             }
-#         }
+    if STATE is None:
+        return RedirectResponse('/#' + urllib.parse.urlencode({'error': 'state_mismatch'}))
+    else:
+        auth_options = {
+            'url': 'https://accounts.spotify.com/api/token',
+            'data': {
+                'code': code,
+                'redirect_uri': REDIRECT_URI,
+                'grant_type': 'authorization_code' 
+            },
+            'headers': {
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'Authorization': 'Basic' + base64.b64encode(f'{CLIENT_ID}:{CLIENT_SECRET}'.encode()).decode()
+            }
+        }
 
-#         response = request.post(auth_options['url'], data = auth_options['data'], headers = auth_options['headers'])
-#     if response.status_code == 200:
-#         token_info = response.json()
-#         return JSONResponse(token_info)
-#     else:
-#         return JSONResponse({"error": response.reason}, status_code = response.status_code)
+        response = request.post(auth_options['url'], data = auth_options['data'], headers = auth_options['headers'])
+    if response.status_code == 200:
+        token_info = response.json()
+        return JSONResponse(token_info)
+    else:
+        return JSONResponse({"error": response.reason}, status_code = response.status_code)
 
 
