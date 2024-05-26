@@ -1,8 +1,5 @@
 from pydantic import BaseModel
 
-class Song(BaseModel):
+class SpotifyRequest(BaseModel):
     name: str
 
-
-class SpotifyRequest(BaseModel):
-    limit: int

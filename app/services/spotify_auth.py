@@ -12,7 +12,7 @@ client_secret = os.getenv("CLIENT_SECRET")
 
 def get_token():
     if not client_id or not client_secret:
-        raise ValueError("Brakujące CLIENT_ID lub CLIENT_SECRET w zmiennych środowiskowych")
+        raise ValueError("Can't find proper environmental variables")
 
     auth_string = client_id + ":" + client_secret
     auth_bytes = auth_string.encode("utf-8")
