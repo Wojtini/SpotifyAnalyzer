@@ -10,12 +10,11 @@ class RecommendationResponse(BaseModel):
     song_name: str
 
 
-class Page(Generic[T]):
-    def __init__(self, items: list[T], page_number: int, page_size: int, total_items: int) -> None:
-        self.items = items
-        self.page_number = page_number
-        self.page_size = page_size
-        self.total_items = total_items
+class Page(BaseModel, Generic[T]):
+    items: list[T]
+    page_number: int
+    page_size: int
+    total_items: int
 
     def total_pages(self) -> int:
         return (self.total_items + self.page_size - 1) // self.page_size
