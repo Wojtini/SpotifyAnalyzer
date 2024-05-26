@@ -4,7 +4,7 @@ import os
 from dotenv import load_dotenv
 from requests import post
 
-from app.exceptions.SpotifyRelatedExceptions import (
+from app.exceptions.spotify_exceptions import (
     EnvironmentalVariableDoesNotExistError,
     SpotifyAuthError,
 )
