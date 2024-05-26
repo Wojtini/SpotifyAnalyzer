@@ -1,15 +1,17 @@
+from typing import Generic, TypeVar
 
 from pydantic import BaseModel
-from typing import TypeVar, Generic, List
 
-T = TypeVar('T')
+T = TypeVar("T")
+
 
 class RecommendationResponse(BaseModel):
     artist_name: str
     song_name: str
 
+
 class Page(Generic[T]):
-    def __init__(self, items: List[T], page_number: int, page_size: int, total_items: int):
+    def __init__(self, items: list[T], page_number: int, page_size: int, total_items: int) -> None:
         self.items = items
         self.page_number = page_number
         self.page_size = page_size
