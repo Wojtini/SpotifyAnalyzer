@@ -23,14 +23,14 @@ pip-sync {requirements_file}
 
 ## Linters
 ### Style - ruff
-Main linter rules are defined in pyproject.toml
+Ruff rules are defined in pyproject.toml
 ```shell
 ruff check
 ```
 ### Typing mypy
-For check typing mypy is used. Command:
+In project mypy is used. Mypy rules are defined in pyproject.toml
 ```shell
-mypy app --disallow-untyped-defs --warn-unreachable
+mypy app
 ```
 
 ## Running
