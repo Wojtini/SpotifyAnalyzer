@@ -8,5 +8,5 @@ api = APIRouter()
 
 
 @api.get("/v1/recommendations-by-song")
-def get_recommendations_by_song(item: SpotifyRequest) -> Page:
-    return get_spotify_recommendations_by_song(item.name)
+def get_recommendations_by_song(name: str) -> Page:
+    return get_spotify_recommendations_by_song(name)
