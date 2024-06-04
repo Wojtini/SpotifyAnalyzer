@@ -1,6 +1,5 @@
 from fastapi import APIRouter
 
-from app.models.requests import SpotifyRequest
 from app.models.responses import Page
 from app.services.spotify_data_fetcher import get_spotify_recommendations_by_song
 
