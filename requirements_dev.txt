@@ -17,6 +17,9 @@ certifi==2024.2.2
     # via
     #   httpcore
     #   httpx
+    #   requests
+charset-normalizer==3.3.2
+    # via requests
 click==8.1.7
     # via
     #   pip-tools
@@ -47,6 +50,7 @@ idna==3.7
     #   anyio
     #   email-validator
     #   httpx
+    #   requests
 iniconfig==2.0.0
     # via pytest
 jinja2==3.1.4
@@ -89,6 +93,8 @@ python-multipart==0.0.9
     # via fastapi
 pyyaml==6.0.1
     # via uvicorn
+requests==2.32.3
+    # via Spotify-Analyzer (pyproject.toml)
 rich==13.7.1
     # via typer
 ruff==0.4.4
@@ -115,7 +121,9 @@ typing-extensions==4.11.0
 ujson==5.9.0
     # via fastapi
 urllib3==2.2.1
-    # via types-requests
+    # via
+    #   requests
+    #   types-requests
 uvicorn[standard]==0.29.0
     # via
     #   fastapi
