@@ -12,6 +12,7 @@ keywords = ["Spotify", "Rest API"]
 requires-python = "==3.11"
 dependencies = [
   "fastapi==0.111.0",
+  "requests==2.31.0",
 ]
 
 [project.optional-dependencies]
