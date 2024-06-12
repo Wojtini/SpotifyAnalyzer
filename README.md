@@ -37,3 +37,9 @@ mypy app
 ```shell
 fastapi dev app/main.py
 ```
+
+## Running with Docker
+```shell
+docker build . --tag "{image_name}"
+docker run -p 8000:8000 {image_name}
+```
