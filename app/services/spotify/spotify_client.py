@@ -82,8 +82,13 @@ class SpotifyClient:
                 "Content-Type": "application/x-www-form-urlencoded",
                 "Authorization": "Basic " + self._auth_base64,
             },
-        ).json()
-        return SpotifyToken(**response)
+        )
+        if response.status_code != HTTPStatus.OK:
+            raise HTTPException(
+                status_code=response.status_code,
+                detail=response.content,
+            )
+        return SpotifyToken(**response.json())
 
     @cached_property
     def _token(self) -> str:
